@@ -11,19 +11,19 @@ export const Nav = () => {
           <a href="./../Home">Home</a>
         </li>
         <li>
-          <a>Songs</a>
+          <a href="./../Media">Songs</a>
         </li>
         <li>
-          <a>Podcasts</a>
+          <a href="./../Media">Podcasts</a>
         </li>
         <li>
-          <a>Music Videos</a>
+          <a href="./../Media">Music Videos</a>
         </li>
         <li>
-          <a>Audio Books</a>
+          <a href="./../Media">Audio Books</a>
         </li>
         <li>
-          <a>Movies</a>
+          <a href="./../Media">Movies</a>
         </li>
       </ul>
       {/* </div> */}
