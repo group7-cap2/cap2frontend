@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "./style.css";
 
 export const Home = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     getData();
-
-    
   }, []);
 
   const getData = async () => {
@@ -19,8 +18,9 @@ export const Home = () => {
   };
 
   return (
-    <div>
+    <div className="homeDiv">
       <h1>{getData}</h1>
+
     </div>
   );
 };

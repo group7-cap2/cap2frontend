@@ -1,11 +1,12 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import "./style.css";
+// import { Link } from 'react-router-dom'
 
 export const Nav = () => {
   return (
-    <div>
-      
-      <Link to="/media/song" > song </Link>
+    <div className="navWrapper">
+
+      {/* <Link to="/media/song" > song </Link> */}
     </div>
-  )
-}
+  );
+};
