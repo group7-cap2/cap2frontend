@@ -132,6 +132,26 @@ export const Home = () => {
             <b>song name</b>
           </p>
           <p className="artistName">artist name</p>
+        </div>{" "}
+        <div className="homeSongs">
+          <img
+            className="songImg"
+            src="https://i.pinimg.com/564x/a1/f3/2c/a1f32cc9f791174884eab87aa299c503.jpg"
+          />
+          <p className="songName">
+            <b>song name</b>
+          </p>
+          <p className="artistName">artist name</p>
+        </div>{" "}
+        <div className="homeSongs">
+          <img
+            className="songImg"
+            src="https://i.pinimg.com/564x/a1/f3/2c/a1f32cc9f791174884eab87aa299c503.jpg"
+          />
+          <p className="songName">
+            <b>song name</b>
+          </p>
+          <p className="artistName">artist name</p>
         </div>
       </div>
     </div>

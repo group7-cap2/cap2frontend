@@ -50,7 +50,7 @@
 }
 
 .homeSongs {
-  width: 23%;
+  width: 18%;
   position: fixed;
   margin: 5px;
   position: relative;
@@ -60,7 +60,7 @@
 }
 
 .homeSongs:hover {
-  width: 23.5%;
+  width: 18.5%;
   cursor: pointer;
 }
 
