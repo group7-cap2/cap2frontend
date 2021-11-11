@@ -8,7 +8,7 @@ export const Nav = () => {
       {/* <div className="navList"> */}
       <ul>
         <li>
-          <a href="./../Home">Home</a>
+          <a href="./../">Home</a>
         </li>
         <li>
           <a href="./../Media">Songs</a>
