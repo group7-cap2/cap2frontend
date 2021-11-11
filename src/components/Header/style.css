@@ -32,12 +32,13 @@
   justify-content: center;
 }
 
+h2:hover,
 .logoDiv:hover {
   cursor: pointer;
 }
 
 .favIcon {
-  margin-left: 70px;
+  margin-left: 45px;
   width: 25px;
 }
 
