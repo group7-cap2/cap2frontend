@@ -1,7 +1,9 @@
 .homeDiv {
   width: 75%;
   margin-left: 285px;
-  /* margin-top: -630px; */
+  background-color: white;
+  padding-top: 20px;
+  padding-left: 10px;
 }
 
 /*--------------------geners style---------------------*/
