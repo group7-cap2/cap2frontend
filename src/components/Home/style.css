@@ -1,0 +1,82 @@
+.homeDiv {
+  width: 75%;
+  margin-left: 285px;
+  /* margin-top: -630px; */
+}
+
+/*--------------------geners style---------------------*/
+
+.genreCardsDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.genres {
+  width: 30%;
+  margin: 3px;
+  position: relative;
+  text-align: center;
+  color: white;
+  transition: all 0.3s ease 0s;
+}
+
+.genres:hover {
+  width: 31%;
+  cursor: pointer;
+}
+
+.genreImg {
+  width: 95%;
+  filter: brightness(50%);
+}
+
+.genHead {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/*--------------------songs style---------------------*/
+
+.homeSongsDiv {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(251, 251, 251);
+  justify-content: center;
+}
+
+.homeSongs {
+  width: 23%;
+  position: fixed;
+  margin: 5px;
+  position: relative;
+  text-align: left;
+  color: white;
+  transition: all 0.3s ease 0s;
+}
+
+.homeSongs:hover {
+  width: 23.5%;
+  cursor: pointer;
+}
+
+.songImg {
+  width: 95%;
+  margin: 4px;
+}
+
+.songName {
+  color: black;
+  margin-left: 5px;
+}
+
+.artistName {
+  color: black;
+  font-size: 15px;
+  margin-top: -7px;
+  margin-left: 5px;
+}
