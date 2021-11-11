@@ -1,6 +1,5 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-
 import { Header } from "./components/Header";
 import { Nav } from "./components/Nav";
 import { Home } from "./components/Home";
@@ -14,7 +13,7 @@ function App() {
         <Nav />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/media/:type" element={<Media />} />
+          <Route exact path="/media" element={<Media />} />
         </Routes>
       </div>
     </div>

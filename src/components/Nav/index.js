@@ -1,29 +1,55 @@
 import React from "react";
 import "./style.css";
+import { useNavigate } from "react-router-dom";
 // import { Link } from 'react-router-dom'
 
 export const Nav = () => {
+  const navigate = useNavigate();
   return (
     <div className="navWrapper">
       {/* <div className="navList"> */}
       <ul>
-        <li>
-          <a href="./../">Home</a>
+        <li
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Home
         </li>
-        <li>
-          <a href="./../Media">Songs</a>
+        <li
+          onClick={() => {
+            navigate("/media");
+          }}
+        >
+          Songs
         </li>
-        <li>
-          <a href="./../Media">Podcasts</a>
+        <li
+          onClick={() => {
+            navigate("/media");
+          }}
+        >
+          Podcasts
         </li>
-        <li>
-          <a href="./../Media">Music Videos</a>
+        <li
+          onClick={() => {
+            navigate("/media");
+          }}
+        >
+          Music Videos
         </li>
-        <li>
-          <a href="./../Media">Audio Books</a>
+        <li
+          onClick={() => {
+            navigate("/media");
+          }}
+        >
+          Audio Books
         </li>
-        <li>
-          <a href="./../Media">Movies</a>
+        <li
+          onClick={() => {
+            navigate("/media");
+          }}
+        >
+          Movies
         </li>
       </ul>
       {/* </div> */}

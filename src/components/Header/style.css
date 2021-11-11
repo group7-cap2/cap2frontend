@@ -14,7 +14,7 @@
 .searchBar {
   width: 60%;
   padding: 2.5px 5px;
-  margin-left: 100px;
+  margin-left: 120px;
   height: 40px;
   border: 1px solid rgb(236, 236, 236);
   border-radius: 25px;
@@ -27,7 +27,20 @@
 .logoDiv {
   color: black;
   margin-left: 10px;
-  width: 70px;
-  height: 50px;
+  /* width: 70px;
+  height: 50px; */
   justify-content: center;
+}
+
+.logoDiv:hover {
+  cursor: pointer;
+}
+
+.favIcon {
+  margin-left: 70px;
+  width: 25px;
+}
+
+.favIcon:hover {
+  cursor: pointer;
 }
