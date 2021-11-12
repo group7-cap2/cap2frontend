@@ -1,12 +1,13 @@
 import React from "react";
 import "./style.css";
 import axios from "axios";
-import { useEffect,useState } from "react";
-
-
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 
 export const Musicvid = () => {
   const [musicV, setmusicV] = useState([]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     getData();
@@ -25,7 +26,13 @@ export const Musicvid = () => {
       <h1>Music Videos</h1> {/* هنا ننادي الكيز للتايب الي اختارها المستخدم*/}
       <div className="mediaDiv">
         {musicV.map((item, i) => (
-          <div className="homeSongs" key={i}>
+          <div
+            className="homeSongs"
+            key={i}
+            onClick={() => {
+              navigate("/musicvideo/info", { state: item });
+            }}
+          >
             <img
               key={`img-${i}`}
               className="songImg"

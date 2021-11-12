@@ -6,10 +6,16 @@ import { Home } from "./components/Home";
 import { Media } from "./components/Media";
 import { Favorite } from "./components/Favorite";
 import { Songs } from "./components/Songs";
+import { SongInfo } from "./components/SongInfo";
 import { Podcasts } from "./components/Podcasts";
+import { PodcastInfo } from "./components/PodcastInfo";
 import { Musicvid } from "./components/MusicVideos";
+import { MusicVideoInfo } from "./components/MusicVideoInfo";
 import { AudioBook } from "./components/AudioBooks";
+import { AudioBookInfo } from "./components/AudioBookInfo";
 import { Movies } from "./components/Movies";
+import { MovieInfo } from "./components/MoiveInfo";
+
 function App() {
   return (
     <div className="App">
@@ -21,11 +27,15 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/media" element={<Media />} />
           <Route exact path="/songs" element={<Songs />} />
+          <Route exact path="/song/info" element={<SongInfo />} />
           <Route exact path="/podcasts" element={<Podcasts />} />
+          <Route exact path="/podcast/info" element={<PodcastInfo />} />
           <Route exact path="/musicvid" element={<Musicvid />} />
+          <Route exact path="//musicvideo/info" element={<MusicVideoInfo />} />
           <Route exact path="/audiobook" element={<AudioBook />} />
+          <Route exact path="/audiobook/info" element={<AudioBookInfo />} />
           <Route exact path="/movies" element={<Movies />} />
-
+          <Route exact path="/movie/info" element={<MovieInfo />} />
         </Routes>
       </div>
     </div>

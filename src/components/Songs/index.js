@@ -1,10 +1,13 @@
 import React from "react";
 import "./style.css";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export const Songs = () => {
   const [song, setSong] = useState([]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     getData();
@@ -23,7 +26,13 @@ export const Songs = () => {
       <h1>Songs</h1> {/* هنا ننادي الكيز للتايب الي اختارها المستخدم*/}
       <div className="mediaDiv">
         {song.map((item, i) => (
-          <div className="homeSongs" key={i}>
+          <div
+            className="homeSongs"
+            key={i}
+            onClick={() => {
+              navigate("/song/info", { state: item });
+            }}
+          >
             <img
               key={`img-${i}`}
               className="songImg"

@@ -2,9 +2,12 @@ import React from "react";
 import "./style.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 
 export const AudioBook = () => {
   const [audioB, setaudioB] = useState([]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     getData();
@@ -23,7 +26,9 @@ export const AudioBook = () => {
       <h1>Audio Books</h1> {/* هنا ننادي الكيز للتايب الي اختارها المستخدم*/}
       <div className="mediaDiv">
         {audioB.map((item, i) => (
-          <div className="homeSongs" key={i}>
+          <div className="homeSongs" key={i} onClick={() => {
+            navigate("/audiobook/info", { state: item });
+          }}>
             <img
               key={`img-${i}`}
               className="songImg"
