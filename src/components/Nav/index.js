@@ -35,7 +35,7 @@ export const Nav = () => {
         </li>
         <li
           onClick={() => {
-            navigate("/media");
+            navigate("/podcasts");
           }}
         >
           Podcasts
