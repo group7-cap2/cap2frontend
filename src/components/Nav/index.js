@@ -49,7 +49,7 @@ export const Nav = () => {
         </li>
         <li
           onClick={() => {
-            navigate("/media");
+            navigate("/audiobook");
           }}
         >
           Audio Books
