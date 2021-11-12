@@ -23,7 +23,7 @@ export const Songs = () => {
 
   return (
     <div className="mediaWrapper">
-      <h1>Songs</h1> {/* هنا ننادي الكيز للتايب الي اختارها المستخدم*/}
+      <h1>Songs</h1> 
       <div className="mediaDiv">
         {song.map((item, i) => (
           <div
