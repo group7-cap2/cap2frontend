@@ -7,6 +7,7 @@ import { Media } from "./components/Media";
 import { Favorite } from "./components/Favorite";
 import { Songs } from "./components/Songs";
 import { Podcasts } from "./components/Podcasts";
+import { Musicvid } from "./components/MusicVideos";
 function App() {
   return (
     <div className="App">
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/media" element={<Media />} />
           <Route exact path="/songs" element={<Songs />} />
           <Route exact path="/podcasts" element={<Podcasts />} />
+          <Route exact path="/musicvid" element={<Musicvid />} />
 
         </Routes>
       </div>
