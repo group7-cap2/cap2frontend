@@ -15,6 +15,12 @@ import { AudioBook } from "./components/AudioBooks";
 import { AudioBookInfo } from "./components/AudioBookInfo";
 import { Movies } from "./components/Movies";
 import { MovieInfo } from "./components/MoiveInfo";
+import { Rock } from "./components/Rock";
+import { Pop } from "./components/Pop";
+import { Kpop } from "./components/Kpop";
+import { Soul } from "./components/Soul";
+
+
 
 function App() {
   return (
@@ -36,6 +42,10 @@ function App() {
           <Route exact path="/audiobook/info" element={<AudioBookInfo />} />
           <Route exact path="/movies" element={<Movies />} />
           <Route exact path="/movie/info" element={<MovieInfo />} />
+          <Route exact path="/rock" element={<Rock />} />
+          <Route exact path="/pop" element={<Pop />} />
+          <Route exact path="/kpop" element={<Kpop />} />
+          <Route exact path="/soul" element={<Soul />} />
         </Routes>
       </div>
     </div>

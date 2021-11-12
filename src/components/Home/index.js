@@ -25,7 +25,12 @@ export const Home = () => {
       <h1>Geners</h1>
 
       <div className="genreCardsDiv">
-        <div className="genres">
+        <div
+          className="genres"
+          onClick={() => {
+            navigate("/rock");
+          }}
+        >
           <img
             className="genreImg"
             src="https://i.pinimg.com/564x/8b/15/c4/8b15c41b8b22f5c2a7a6debd25f7f6c8.jpg"
@@ -33,7 +38,12 @@ export const Home = () => {
           />
           <h2 className="genHead">Rock</h2>
         </div>
-        <div className="genres">
+        <div
+          className="genres"
+          onClick={() => {
+            navigate("/pop");
+          }}
+        >
           <img
             className="genreImg"
             src="https://i.pinimg.com/564x/91/f4/c7/91f4c75d05f3a193cbd38524b5f55a77.jpg"
@@ -41,21 +51,31 @@ export const Home = () => {
           />
           <h2 className="genHead">Pop</h2>
         </div>
-        <div className="genres">
+        <div
+          className="genres"
+          onClick={() => {
+            navigate("/kpop");
+          }}
+        >
           <img
             className="genreImg"
-            src="https://i.pinimg.com/564x/b3/02/0d/b3020d4f9cad774a77a1097ae8da04ea.jpg"
+            src="https://i.pinimg.com/564x/e5/e1/b2/e5e1b272a5d1a234bd626310c932f701.jpg"
             alt="jazzImg"
           />
-          <h2 className="genHead">Jazz</h2>
+          <h2 className="genHead">Kpop</h2>
         </div>
-        <div className="genres">
+        <div
+          className="genres"
+          onClick={() => {
+            navigate("/soul");
+          }}
+        >
           <img
             className="genreImg"
-            src="https://i.pinimg.com/564x/3f/50/02/3f500283ba9122de81bfd12b996aa3df.jpg"
+            src="https://i.pinimg.com/564x/19/79/4f/19794fa23fedd4226ac1f598de7a6490.jpg"
             alt="ClassicImg"
           />
-          <h2 className="genHead">Classic</h2>
+          <h2 className="genHead">R&B/Soul</h2>
         </div>
       </div>
       <h1>For You</h1>
@@ -82,96 +102,6 @@ export const Home = () => {
             </p>
           </div>
         ))}
-        {/* <div className="homeSongs">
-          <img
-            className="songImg"
-            src="https://i.pinimg.com/564x/a1/f3/2c/a1f32cc9f791174884eab87aa299c503.jpg"
-          />
-          <p className="songName">
-            <b>song name</b>
-          </p>
-          <p className="artistName">artist name</p>
-        </div>
-        <div className="homeSongs">
-          <img
-            className="songImg"
-            src="https://i.pinimg.com/564x/a1/f3/2c/a1f32cc9f791174884eab87aa299c503.jpg"
-          />
-          <p className="songName">
-            <b>song name</b>
-          </p>
-          <p className="artistName">artist name</p>
-        </div>
-        <div className="homeSongs">
-          <img
-            className="songImg"
-            src="https://i.pinimg.com/564x/a1/f3/2c/a1f32cc9f791174884eab87aa299c503.jpg"
-          />
-          <p className="songName">
-            <b>song name</b>
-          </p>
-          <p className="artistName">artist name</p>
-        </div>
-        <div className="homeSongs">
-          <img
-            className="songImg"
-            src="https://i.pinimg.com/564x/a1/f3/2c/a1f32cc9f791174884eab87aa299c503.jpg"
-          />
-          <p className="songName">
-            <b>song name</b>
-          </p>
-          <p className="artistName">artist name</p>
-        </div>
-        <div className="homeSongs">
-          <img
-            className="songImg"
-            src="https://i.pinimg.com/564x/a1/f3/2c/a1f32cc9f791174884eab87aa299c503.jpg"
-          />
-          <p className="songName">
-            <b>song name</b>
-          </p>
-          <p className="artistName">artist name</p>
-        </div>
-        <div className="homeSongs">
-          <img
-            className="songImg"
-            src="https://i.pinimg.com/564x/a1/f3/2c/a1f32cc9f791174884eab87aa299c503.jpg"
-          />
-          <p className="songName">
-            <b>song name</b>
-          </p>
-          <p className="artistName">artist name</p>
-        </div>
-        <div className="homeSongs">
-          <img
-            className="songImg"
-            src="https://i.pinimg.com/564x/a1/f3/2c/a1f32cc9f791174884eab87aa299c503.jpg"
-          />
-          <p className="songName">
-            <b>song name</b>
-          </p>
-          <p className="artistName">artist name</p>
-        </div>{" "}
-        <div className="homeSongs">
-          <img
-            className="songImg"
-            src="https://i.pinimg.com/564x/a1/f3/2c/a1f32cc9f791174884eab87aa299c503.jpg"
-          />
-          <p className="songName">
-            <b>song name</b>
-          </p>
-          <p className="artistName">artist name</p>
-        </div>{" "}
-        <div className="homeSongs">
-          <img
-            className="songImg"
-            src="https://i.pinimg.com/564x/a1/f3/2c/a1f32cc9f791174884eab87aa299c503.jpg"
-          />
-          <p className="songName">
-            <b>song name</b>
-          </p>
-          <p className="artistName">artist name</p>
-        </div> */}
       </div>
     </div>
   );
