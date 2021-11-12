@@ -12,6 +12,7 @@
 ul {
   list-style: none;
   margin-top: 70px;
+  width: 100%;
 }
 
 .backIcon {
@@ -21,24 +22,13 @@ ul {
   width: 25px;
 }
 
-a {
-  text-decoration: none;
-  color: rgb(63, 63, 63);
-  padding-right: 165px;
-  height: 30px;
-}
-
-a:hover {
-  color: white;
-}
-
 li {
   text-align: left;
-  margin-top: 15px;
-  margin-left: -38px;
-  padding: 5px;
-  width: 265px;
-  height: 30px;
+  margin-top: 5%;
+  margin-left: -16%;
+  padding: 3%;
+  width: 113%;
+  height: 5%;
   color: rgb(63, 63, 63);
   transition: all 0.3s ease 0s;
 }
@@ -46,6 +36,6 @@ li {
 li:hover {
   cursor: pointer;
   color: white;
-  font-size: 17px;
+  font-size: 110%;
   background-color: rgb(219, 69, 119);
 }

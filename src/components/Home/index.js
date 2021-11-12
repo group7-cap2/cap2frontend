@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import "./style.css";
 
 export const Home = () => {
   const [song, setSong] = useState([]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     getData();
@@ -58,7 +61,13 @@ export const Home = () => {
       <h1>For You</h1>
       <div className="homeSongsDiv">
         {song.map((item, i) => (
-          <div className="homeSongs" key={i}>
+          <div
+            className="homeSongs"
+            key={i}
+            onClick={() => {
+              navigate("/song/info", { state: item });
+            }}
+          >
             <img
               key={`img-${i}`}
               className="songImg"

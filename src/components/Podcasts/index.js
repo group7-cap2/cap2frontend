@@ -36,7 +36,7 @@ export const Podcasts = () => {
             <img
               key={`img-${i}`}
               className="songImg"
-              src={item.artworkUrl100}
+              src={item.artworkUrl600}
               alt={`songImg-${i}`}
             />
             <p className="songName" key={`trackN-${i}`}>

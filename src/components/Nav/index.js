@@ -16,8 +16,9 @@ export const Nav = () => {
           <img
             className="backIcon"
             src="https://img.icons8.com/material-outlined/48/000000/circled-left--v1.png"
-            alt="backIcon"
+            alt="Go Back btn"
           />
+          Go Back 
         </li>
         <li
           onClick={() => {

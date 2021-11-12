@@ -1,0 +1,39 @@
+.infoPageDiv {
+  width: 99%;
+  background-color: white;
+  margin-top: -1.8%;
+}
+
+.infoDetails {
+  width: 75%;
+  margin-left: 23%;
+  display: block;
+}
+.infoImg {
+  width: 40%;
+  margin: 1%;
+}
+
+.songName {
+  color: black;
+  margin-left: 5px;
+}
+
+.artistName {
+  color: black;
+  font-size: 15px;
+  margin-top: -1%;
+  margin-left: 5px;
+}
+
+.album {
+  color: black;
+  font-size: 13px;
+  margin-top: -1.5%;
+  margin-left: 5px;
+}
+
+.preview {
+  width: 75%;
+  color: black;
+}

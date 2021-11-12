@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import "./style.css";
 
 export const SongInfo = () => {
   const location = useLocation();
@@ -7,18 +8,23 @@ export const SongInfo = () => {
 
   console.log(item);
   return (
-    <div>
-      <img
-        className="songImg"
-        src={item.artworkUrl100}
-        alt={"songImg-${i}"}
-      />
-      <p className="songName">
-        <b>{item.trackName}</b>
-      </p>
-      <p className="artistName">
-        {item.artistName}
-      </p>
+    <div className="infoPageDiv">
+      <div className="infoDetails">
+        <h1>Song Details</h1>
+        <img
+          className="infoImg"
+          src={item.artworkUrl100}
+          alt={"songImg-${i}"}
+        />
+        <h2 className="songName">
+          <b>{item.trackName}</b>
+        </h2>
+        <h4 className="album"> {item.collectionName}</h4>
+        <h3 className="artistName">{item.artistName}</h3>
+        <audio controls className="preview">
+          <source src={item.previewUrl} type="audio/mp4" />
+        </audio>
+      </div>
     </div>
   );
 };

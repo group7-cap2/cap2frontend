@@ -24,8 +24,9 @@
 }
 
 .genres:hover {
-  width: 31%;
+  width: 32%;
   cursor: pointer;
+  transition: all 0.3s ease 0s;
 }
 
 .genreImg {
@@ -47,7 +48,6 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  background-color: rgb(251, 251, 251);
   justify-content: center;
 }
 
@@ -64,6 +64,9 @@
 .homeSongs:hover {
   width: 18.5%;
   cursor: pointer;
+  background-color: rgb(236, 236, 236, 0.5);
+  border-radius: 15px;
+  transition: all 0.3s ease 0s;
 }
 
 .songImg {
