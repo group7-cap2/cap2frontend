@@ -30,13 +30,13 @@ export const Favorite = () => {
 
   const handleFav = async (item) => {
     const res = await axios.get(
-      `http://localhost:5000/song/isfav/${item.trackId}`
+      `http://localhost:5000/${item.kind}/isfav/${item.trackId}`
     );
 
     if (res.data) {
-      axios.put(`http://localhost:5000/song/removeFav/${item.trackId}`);
+      axios.put(`http://localhost:5000/${item.kind}/removeFav/${item.trackId}`);
     } else {
-      axios.post(`http://localhost:5000/song/addToFav/${item.trackId}`);
+      axios.post(`http://localhost:5000/${item.kind}/addToFav/${item.trackId}`);
     }
 
     console.log(res.data);
@@ -50,11 +50,11 @@ export const Favorite = () => {
   };
 
   return (
-    <div className="mediaWrapper">
+    <div className="mediaWrapperFav">
       <h1>Songs</h1>
-      <div className="mediaDiv">
+      <div className="favDiv">
         {favList.song.map((item, i) => (
-          <div className="homeSongs" key={i}>
+          <div className="favSongs" key={i}>
             <div
               onClick={() => {
                 navigate("/song/info", { state: item });
@@ -73,21 +73,20 @@ export const Favorite = () => {
                 {item.artistName}
               </p>
             </div>
-            <img
-              className="favButton"
-              src={`https://img.icons8.com/external-prettycons-solid-prettycons/60/${
-                isFavFun(item.trackId) ? "000000" : "ff0000"
-              }/external-favorite-essentials-prettycons-solid-prettycons.png`}
+            <button
+              className="favBtn"
               alt="favIcon"
               onClick={() => handleFav(item)}
-            />
+            >
+              {isFavFun(item.trackId) ? `❤` : `✘`}
+            </button>
           </div>
         ))}
       </div>
       <h1>Podcasts</h1> {/* هنا ننادي الكيز للتايب الي اختارها المستخدم*/}
-      <div className="mediaDiv">
+      <div className="favDiv">
         {favList.podcast.map((item, i) => (
-          <div className="homeSongs" key={i}>
+          <div className="favSongs" key={i}>
             <div
               onClick={() => {
                 navigate("/podcast/info", { state: item });
@@ -106,21 +105,20 @@ export const Favorite = () => {
                 {item.artistName}
               </p>
             </div>
-            <img
-              className="favButton"
-              src={`https://img.icons8.com/external-prettycons-solid-prettycons/60/${
-                isFavFun(item.trackId) ? "000000" : "ff0000"
-              }/external-favorite-essentials-prettycons-solid-prettycons.png`}
+            <button
+              className="favBtn"
               alt="favIcon"
               onClick={() => handleFav(item)}
-            />
+            >
+              {isFavFun(item.trackId) ? `❤` : `✘`}
+            </button>
           </div>
         ))}
       </div>
       <h1>Music Videos</h1> {/* هنا ننادي الكيز للتايب الي اختارها المستخدم*/}
-      <div className="mediaDiv">
+      <div className="favDiv">
         {favList.musicVideo.map((item, i) => (
-          <div className="homeSongs" key={i}>
+          <div className="favSongs" key={i}>
             <div
               onClick={() => {
                 navigate("/musicvideo/info", { state: item });
@@ -139,21 +137,20 @@ export const Favorite = () => {
                 {item.artistName}
               </p>
             </div>{" "}
-            <img
-              className="favButton"
-              src={`https://img.icons8.com/external-prettycons-solid-prettycons/60/${
-                isFavFun(item.trackId) ? "000000" : "ff0000"
-              }/external-favorite-essentials-prettycons-solid-prettycons.png`}
+            <button
+              className="favBtn"
               alt="favIcon"
               onClick={() => handleFav(item)}
-            />
+            >
+              {isFavFun(item.trackId) ? `❤` : `✘`}
+            </button>
           </div>
         ))}
       </div>
       <h1>Audio Books</h1> {/* هنا ننادي الكيز للتايب الي اختارها المستخدم*/}
-      <div className="mediaDiv">
+      <div className="favDiv">
         {favList.audiobook.map((item, i) => (
-          <div className="homeSongs" key={i}>
+          <div className="favSongs" key={i}>
             <div
               onClick={() => {
                 navigate("/audiobook/info", { state: item });
@@ -172,21 +169,20 @@ export const Favorite = () => {
                 {item.artistName}
               </p>
             </div>{" "}
-            <img
-              className="favButton"
-              src={`https://img.icons8.com/external-prettycons-solid-prettycons/60/${
-                isFavFun(item.trackId) ? "000000" : "ff0000"
-              }/external-favorite-essentials-prettycons-solid-prettycons.png`}
+            <button
+              className="favBtn"
               alt="favIcon"
               onClick={() => handleFav(item)}
-            />
+            >
+              {isFavFun(item.trackId) ? `❤` : `✘`}
+            </button>
           </div>
         ))}
       </div>
       <h1>Movies</h1> {/* هنا ننادي الكيز للتايب الي اختارها المستخدم*/}
-      <div className="mediaDiv">
+      <div className="favDiv">
         {favList.movie.map((item, i) => (
-          <div className="homeSongs" key={i}>
+          <div className="favSongs" key={i}>
             <div
               onClick={() => {
                 navigate("/movie/info", { state: item });
@@ -205,14 +201,13 @@ export const Favorite = () => {
                 {item.artistName}
               </p>
             </div>
-            <img
-              className="favButton"
-              src={`https://img.icons8.com/external-prettycons-solid-prettycons/60/${
-                isFavFun(item.trackId) ? "000000" : "ff0000"
-              }/external-favorite-essentials-prettycons-solid-prettycons.png`}
+            <button
+              className="favBtn"
               alt="favIcon"
               onClick={() => handleFav(item)}
-            />
+            >
+              {isFavFun(item.trackId) ? `❤` : `✘`}
+            </button>
           </div>
         ))}
       </div>

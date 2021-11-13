@@ -122,16 +122,13 @@ export const Home = () => {
                 {item.artistName}
               </p>
             </div>
-            <img
-              className="favButton"
-              src={`${
-                isFavFun(item.trackId)
-                  ? `https://img.icons8.com/external-prettycons-solid-prettycons/60/000000/external-favorite-essentials-prettycons-solid-prettycons.png`
-                  : `https://img.icons8.com/windows/32/000000/hearts.png`
-              }`}
+            <button
+              className="favBtn"
               alt="favIcon"
               onClick={() => handleFav(item)}
-            />
+            >
+              {isFavFun(item.trackId) ? `❤` : `✘`}
+            </button>
           </div>
         ))}
       </div>

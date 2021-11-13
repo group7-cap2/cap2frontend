@@ -1,4 +1,4 @@
-.mediaWrapper {
+.mediaWrapperFav {
   width: 75%;
   margin-left: 285px;
   background-color: white;
@@ -6,14 +6,14 @@
   padding-left: 10px;
 }
 
-.mediaDiv {
+.favDiv {
   display: flex;
-  align-items: center;
+  align-items: left;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
 }
 
-.mediaCards {
+.favSongs {
   width: 18%;
   position: fixed;
   margin: 5px;
@@ -23,17 +23,17 @@
   transition: all 0.3s ease 0s;
 }
 
-.mediaCards:hover {
+.favSongs:hover {
   width: 18.5%;
   cursor: pointer;
 }
 
-.artworkImg {
+.songImg {
   width: 95%;
   margin: 4px;
 }
 
-.trackName {
+.songName {
   color: black;
   margin-left: 5px;
 }

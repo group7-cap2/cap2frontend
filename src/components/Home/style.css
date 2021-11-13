@@ -86,13 +86,23 @@
   margin-left: 5px;
 }
 
-.favButton {
+.favBtn {
+  background-color: rgb(230, 230, 230);
+  border: none;
+  border-radius: 100%;
   margin-left: 70%;
   margin-top: -50%;
   margin-bottom: 10%;
-  width: 25px;
+  width: 20%;
+  font-size: 15px;
 }
 
-.favButton:hover {
+.favBtn:hover {
   cursor: pointer;
+  transition: ease;
+}
+
+.favBtn:active {
+  background-color: rgb(219, 69, 119);
+  color: white;
 }

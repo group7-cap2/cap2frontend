@@ -67,17 +67,16 @@ export const Search = () => {
                 <b>{item.trackName}</b>
               </p>
               <p className="artistName" key={`artN-${i}`}>
-                {item.artistName}
+                {item.artistName.substr(0, 35)}
               </p>
             </div>
-            <img
-              className="favButton"
-              src={`https://img.icons8.com/external-prettycons-solid-prettycons/60/${
-                isFavFun(item.trackId) ? "000000" : "ff0000"
-              }/external-favorite-essentials-prettycons-solid-prettycons.png`}
+            <button
+              className="favBtn"
               alt="favIcon"
               onClick={() => handleFav(item)}
-            />
+            >
+              {isFavFun(item.trackId) ? `❤` : `✘`}
+            </button>
           </div>
         ))}
       </div>

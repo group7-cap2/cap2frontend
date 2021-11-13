@@ -23,13 +23,17 @@ export const AudioBook = () => {
 
   const handleFav = async (item) => {
     const res = await axios.get(
-      `http://localhost:5000/audiobook/isfav/${item.trackId}`
+      `http://localhost:5000/audiobook/isfav/${item.collectionId}`
     );
 
     if (res.data) {
-      axios.put(`http://localhost:5000/audiobook/removeFav/${item.trackId}`);
+      axios.put(
+        `http://localhost:5000/audiobook/removeFav/${item.collectionId}`
+      );
     } else {
-      axios.post(`http://localhost:5000/audiobook/addToFav/${item.trackId}`);
+      axios.post(
+        `http://localhost:5000/audiobook/addToFav/${item.collectionId}`
+      );
     }
 
     console.log(res.data);
@@ -66,14 +70,13 @@ export const AudioBook = () => {
                 {item.artistName.substr(0, 35)}
               </p>
             </div>
-            <img
-              className="favButton"
-              src={`https://img.icons8.com/external-prettycons-solid-prettycons/60/${
-                isFavFun(item.trackId) ? "000000" : "ff0000"
-              }/external-favorite-essentials-prettycons-solid-prettycons.png`}
+            <button
+              className="favBtn"
               alt="favIcon"
               onClick={() => handleFav(item)}
-            />
+            >
+              {isFavFun(item.trackId) ? `❤` : `✘`}
+            </button>
           </div>
         ))}
       </div>
