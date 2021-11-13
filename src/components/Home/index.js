@@ -12,6 +12,10 @@ export const Home = () => {
     getData();
   }, []);
 
+  const handleFav = () => {
+    console.log("fav");
+  };
+
   const getData = async () => {
     const res = await axios.get("http://localhost:5000/song");
 
@@ -81,25 +85,32 @@ export const Home = () => {
       <h1>For You</h1>
       <div className="homeSongsDiv">
         {song.map((item, i) => (
-          <div
-            className="homeSongs"
-            key={i}
-            onClick={() => {
-              navigate("/song/info", { state: item });
-            }}
-          >
+          <div className="homeSongs" key={i}>
+            <div
+              onClick={() => {
+                navigate("/song/info", { state: item });
+              }}
+            >
+              <img
+                key={`img-${i}`}
+                className="songImg"
+                src={item.artworkUrl100}
+                alt={`songImg-${i}`}
+              />
+              <p className="songName" key={`trackN-${i}`}>
+                <b>{item.trackName}</b>
+              </p>
+              <p className="artistName" key={`artN-${i}`}>
+                {item.artistName}
+              </p>
+            </div>
+
             <img
-              key={`img-${i}`}
-              className="songImg"
-              src={item.artworkUrl100}
-              alt={`songImg-${i}`}
+              className="favIcon"
+              src="https://img.icons8.com/external-prettycons-solid-prettycons/60/000000/external-favorite-essentials-prettycons-solid-prettycons.png"
+              alt="favIcon"
+              onClick={() => handleFav()}
             />
-            <p className="songName" key={`trackN-${i}`}>
-              <b>{item.trackName}</b>
-            </p>
-            <p className="artistName" key={`artN-${i}`}>
-              {item.artistName}
-            </p>
           </div>
         ))}
       </div>

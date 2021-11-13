@@ -19,8 +19,7 @@ import { Rock } from "./components/Rock";
 import { Pop } from "./components/Pop";
 import { Kpop } from "./components/Kpop";
 import { Soul } from "./components/Soul";
-
-
+import { Search } from "./components/Search";
 
 function App() {
   return (
@@ -46,6 +45,7 @@ function App() {
           <Route exact path="/pop" element={<Pop />} />
           <Route exact path="/kpop" element={<Kpop />} />
           <Route exact path="/soul" element={<Soul />} />
+          <Route exact path="/search" element={<Search />} />
         </Routes>
       </div>
     </div>

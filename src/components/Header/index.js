@@ -4,6 +4,13 @@ import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const navigate = useNavigate();
+
+  const handelSearch = (event) => {
+    if (event.key == "Enter") {
+      navigate("/search", { state: event.target.value });
+    }
+  };
+
   return (
     <div className="headerDiv">
       <div
@@ -26,7 +33,11 @@ export const Header = () => {
         MusicHub
       </h2>
 
-      <input className="searchBar" placeholder="   Search..." />
+      <input
+        className="searchBar"
+        placeholder="   Search..."
+        onKeyUp={(event) => handelSearch(event)}
+      />
 
       <img
         className="favIcon"
