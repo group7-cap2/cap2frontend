@@ -5,16 +5,13 @@ import "./style.css";
 
 export const Home = () => {
   const [song, setSong] = useState([]);
+  const [isFav, setIsFav] = useState([]);
 
   const navigate = useNavigate();
 
   useEffect(() => {
     getData();
   }, []);
-
-  const handleFav = () => {
-    console.log("fav");
-  };
 
   const getData = async () => {
     const res = await axios.get("http://localhost:5000/song");
@@ -23,7 +20,28 @@ export const Home = () => {
 
     setSong(res.data);
   };
-  console.log(song);
+
+  const handleFav = async (item) => {
+    const res = await axios.get(
+      `http://localhost:5000/song/isfav/${item.trackId}`
+    );
+
+    if (res.data) {
+      axios.put(`http://localhost:5000/song/removeFav/${item.trackId}`);
+    } else {
+      axios.post(`http://localhost:5000/song/addToFav/${item.trackId}`);
+    }
+
+    console.log(res.data);
+  };
+
+  const isFavFun = async (id) => {
+    const res = await axios.get(`http://localhost:5000/song/isfav/${id}`);
+
+    console.log(res.data);
+    return res.data;
+  };
+
   return (
     <div className="homeDiv">
       <h1>Geners</h1>
@@ -104,12 +122,11 @@ export const Home = () => {
                 {item.artistName}
               </p>
             </div>
-
             <img
               className="favIcon"
-              src="https://img.icons8.com/external-prettycons-solid-prettycons/60/000000/external-favorite-essentials-prettycons-solid-prettycons.png"
+              src={`https://img.icons8.com/external-prettycons-solid-prettycons/60/000000/external-favorite-essentials-prettycons-solid-prettycons.png`}
               alt="favIcon"
-              onClick={() => handleFav()}
+              onClick={() => handleFav(item)}
             />
           </div>
         ))}

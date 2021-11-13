@@ -6,7 +6,7 @@ import axios, { Axios } from "axios";
 
 export const Songs = () => {
   const [song, setSong] = useState([]);
-  const [isFav, setIsFav] = useState([])
+  const [isFav, setIsFav] = useState([]);
 
   const navigate = useNavigate();
 
@@ -27,10 +27,10 @@ export const Songs = () => {
       `http://localhost:5000/song/isfav/${item.trackId}`
     );
 
-    if(res.data){
-      axios.put(`http://localhost:5000/song/removeFav/${item.trackId}`)
+    if (res.data) {
+      axios.put(`http://localhost:5000/song/removeFav/${item.trackId}`);
     } else {
-      axios.post(`http://localhost:5000/song/addToFav/${item.trackId}`)
+      axios.post(`http://localhost:5000/song/addToFav/${item.trackId}`);
     }
 
     console.log(res.data);
@@ -41,7 +41,6 @@ export const Songs = () => {
 
     console.log(res.data);
     return res.data;
-    
   };
 
   return (
