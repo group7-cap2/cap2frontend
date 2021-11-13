@@ -20,11 +20,11 @@
   position: relative;
   text-align: left;
   color: white;
-  transition: all 0.3s ease 0s;
+  transition: all 0.5s ease-in-out;
 }
 
 .favSongs:hover {
-  width: 18.5%;
+  transform: scale(1.1);
   cursor: pointer;
 }
 
