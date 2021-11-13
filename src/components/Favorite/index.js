@@ -28,26 +28,26 @@ export const Favorite = () => {
     setFavList(res.data);
   };
 
-  // const handleFav = async (item) => {
-  //   const res = await axios.get(
-  //     `http://localhost:5000/song/isfav/${item.trackId}`
-  //   );
+  const handleFav = async (item) => {
+    const res = await axios.get(
+      `http://localhost:5000/song/isfav/${item.trackId}`
+    );
 
-  //   if (res.data) {
-  //     axios.put(`http://localhost:5000/song/removeFav/${item.trackId}`);
-  //   } else {
-  //     axios.post(`http://localhost:5000/song/addToFav/${item.trackId}`);
-  //   }
+    if (res.data) {
+      axios.put(`http://localhost:5000/song/removeFav/${item.trackId}`);
+    } else {
+      axios.post(`http://localhost:5000/song/addToFav/${item.trackId}`);
+    }
 
-  //   console.log(res.data);
-  // };
+    console.log(res.data);
+  };
 
-  // const isFavFun = async (id) => {
-  //   const res = await axios.get(`http://localhost:5000/song/isfav/${id}`);
+  const isFavFun = async (id) => {
+    const res = await axios.get(`http://localhost:5000/song/isfav/${id}`);
 
-  //   console.log(res.data);
-  //   return res.data;
-  // };
+    console.log(res.data);
+    return res.data;
+  };
 
   return (
     <div className="mediaWrapper">
@@ -73,14 +73,14 @@ export const Favorite = () => {
                 {item.artistName}
               </p>
             </div>
-            {/* <img
-              className="favIcon"
+            <img
+              className="favButton"
               src={`https://img.icons8.com/external-prettycons-solid-prettycons/60/${
                 isFavFun(item.trackId) ? "000000" : "ff0000"
               }/external-favorite-essentials-prettycons-solid-prettycons.png`}
               alt="favIcon"
               onClick={() => handleFav(item)}
-            /> */}
+            />
           </div>
         ))}
       </div>
@@ -106,14 +106,14 @@ export const Favorite = () => {
                 {item.artistName}
               </p>
             </div>
-            {/* <img
-              className="favIcon"
+            <img
+              className="favButton"
               src={`https://img.icons8.com/external-prettycons-solid-prettycons/60/${
                 isFavFun(item.trackId) ? "000000" : "ff0000"
               }/external-favorite-essentials-prettycons-solid-prettycons.png`}
               alt="favIcon"
               onClick={() => handleFav(item)}
-            /> */}
+            />
           </div>
         ))}
       </div>
@@ -139,14 +139,14 @@ export const Favorite = () => {
                 {item.artistName}
               </p>
             </div>{" "}
-            {/* <img
-              className="favIcon"
+            <img
+              className="favButton"
               src={`https://img.icons8.com/external-prettycons-solid-prettycons/60/${
                 isFavFun(item.trackId) ? "000000" : "ff0000"
               }/external-favorite-essentials-prettycons-solid-prettycons.png`}
               alt="favIcon"
               onClick={() => handleFav(item)}
-            /> */}
+            />
           </div>
         ))}
       </div>
@@ -172,14 +172,14 @@ export const Favorite = () => {
                 {item.artistName}
               </p>
             </div>{" "}
-            {/* <img
-              className="favIcon"
+            <img
+              className="favButton"
               src={`https://img.icons8.com/external-prettycons-solid-prettycons/60/${
                 isFavFun(item.trackId) ? "000000" : "ff0000"
               }/external-favorite-essentials-prettycons-solid-prettycons.png`}
               alt="favIcon"
               onClick={() => handleFav(item)}
-            /> */}
+            />
           </div>
         ))}
       </div>
@@ -205,14 +205,14 @@ export const Favorite = () => {
                 {item.artistName}
               </p>
             </div>
-            {/* <img
-              className="favIcon"
+            <img
+              className="favButton"
               src={`https://img.icons8.com/external-prettycons-solid-prettycons/60/${
                 isFavFun(item.trackId) ? "000000" : "ff0000"
               }/external-favorite-essentials-prettycons-solid-prettycons.png`}
               alt="favIcon"
               onClick={() => handleFav(item)}
-            /> */}
+            />
           </div>
         ))}
       </div>
