@@ -71,7 +71,7 @@ export const Search = () => {
               </p>
             </div>
             <img
-              className="favIcon"
+              className="favButton"
               src={`https://img.icons8.com/external-prettycons-solid-prettycons/60/${
                 isFavFun(item.trackId) ? "000000" : "ff0000"
               }/external-favorite-essentials-prettycons-solid-prettycons.png`}

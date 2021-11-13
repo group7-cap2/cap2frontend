@@ -123,8 +123,12 @@ export const Home = () => {
               </p>
             </div>
             <img
-              className="favIcon"
-              src={`https://img.icons8.com/external-prettycons-solid-prettycons/60/000000/external-favorite-essentials-prettycons-solid-prettycons.png`}
+              className="favButton"
+              src={`${
+                isFavFun(item.trackId)
+                  ? `https://img.icons8.com/external-prettycons-solid-prettycons/60/000000/external-favorite-essentials-prettycons-solid-prettycons.png`
+                  : `https://img.icons8.com/windows/32/000000/hearts.png`
+              }`}
               alt="favIcon"
               onClick={() => handleFav(item)}
             />

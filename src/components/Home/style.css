@@ -85,3 +85,14 @@
   margin-top: -7px;
   margin-left: 5px;
 }
+
+.favButton {
+  margin-left: 70%;
+  margin-top: -50%;
+  margin-bottom: 10%;
+  width: 25px;
+}
+
+.favButton:hover {
+  cursor: pointer;
+}

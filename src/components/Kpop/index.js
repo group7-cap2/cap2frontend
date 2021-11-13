@@ -67,7 +67,7 @@ export const Kpop = () => {
               </p>
             </div>
             <img
-              className="favIcon"
+              className="favButton"
               src="https://img.icons8.com/external-prettycons-solid-prettycons/60/000000/external-favorite-essentials-prettycons-solid-prettycons.png"
               alt="favIcon"
               onClick={() => handleFav(item)}
