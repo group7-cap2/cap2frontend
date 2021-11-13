@@ -62,7 +62,7 @@ export const Songs = () => {
                 alt={`songImg-${i}`}
               />
               <p className="songName" key={`trackN-${i}`}>
-                <b>{item.trackName.substr(0, 10)+ "  ..." }</b>
+                <b>{item.trackName.substr(0, 35)}</b>
               </p>
               <p className="artistName" key={`artN-${i}`}>
                 {item.artistName}
@@ -70,9 +70,9 @@ export const Songs = () => {
             </div>
             <img
               className="favIcon"
-              src={
-                `https://img.icons8.com/external-prettycons-solid-prettycons/60/${(isFavFun(item.trackId))? "000000" : "ff0000"}/external-favorite-essentials-prettycons-solid-prettycons.png`
-              }
+              src={`https://img.icons8.com/external-prettycons-solid-prettycons/60/${
+                isFavFun(item.trackId) ? "000000" : "ff0000"
+              }/external-favorite-essentials-prettycons-solid-prettycons.png`}
               alt="favIcon"
               onClick={() => handleFav(item)}
             />

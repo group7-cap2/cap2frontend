@@ -26,9 +26,13 @@ export const AudioBook = () => {
       <h1>Audio Books</h1> {/* هنا ننادي الكيز للتايب الي اختارها المستخدم*/}
       <div className="mediaDiv">
         {audioB.map((item, i) => (
-          <div className="homeSongs" key={i} onClick={() => {
-            navigate("/audiobook/info", { state: item });
-          }}>
+          <div
+            className="homeSongs"
+            key={i}
+            onClick={() => {
+              navigate("/audiobook/info", { state: item });
+            }}
+          >
             <img
               key={`img-${i}`}
               className="songImg"
@@ -36,10 +40,10 @@ export const AudioBook = () => {
               alt={`songImg-${i}`}
             />
             <p className="songName" key={`trackN-${i}`}>
-              <b>{item.collectionName}</b>
+              <b>{item.collectionName.substr(0, 35)}</b>
             </p>
             <p className="artistName" key={`artN-${i}`}>
-              {item.artistName}
+              {item.artistName.substr(0, 35)}
             </p>
           </div>
         ))}

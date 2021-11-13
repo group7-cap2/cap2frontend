@@ -13,6 +13,10 @@ export const Kpop = () => {
     getData();
   }, []);
 
+  const handleFav = () => {
+    console.log("fav");
+  };
+
   const getData = async () => {
     const res = await axios.get("http://localhost:5000/kpop");
 
@@ -26,25 +30,31 @@ export const Kpop = () => {
       <h1>K-pop Songs</h1>
       <div className="mediaDiv">
         {song.map((item, i) => (
-          <div
-            className="homeSongs"
-            key={i}
-            onClick={() => {
-              navigate("/song/info", { state: item });
-            }}
-          >
+          <div className="homeSongs" key={i}>
+            <div
+              onClick={() => {
+                navigate("/song/info", { state: item });
+              }}
+            >
+              <img
+                key={`img-${i}`}
+                className="songImg"
+                src={item.artworkUrl100}
+                alt={`songImg-${i}`}
+              />
+              <p className="songName" key={`trackN-${i}`}>
+                <b>{item.trackName.substr(0, 35)}</b>
+              </p>
+              <p className="artistName" key={`artN-${i}`}>
+                {item.artistName}
+              </p>
+            </div>
             <img
-              key={`img-${i}`}
-              className="songImg"
-              src={item.artworkUrl100}
-              alt={`songImg-${i}`}
+              className="favIcon"
+              src="https://img.icons8.com/external-prettycons-solid-prettycons/60/000000/external-favorite-essentials-prettycons-solid-prettycons.png"
+              alt="favIcon"
+              onClick={() => handleFav()}
             />
-            <p className="songName" key={`trackN-${i}`}>
-              <b>{item.trackName}</b>
-            </p>
-            <p className="artistName" key={`artN-${i}`}>
-              {item.artistName}
-            </p>
           </div>
         ))}
       </div>

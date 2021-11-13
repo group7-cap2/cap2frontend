@@ -10,6 +10,7 @@ export const PodcastInfo = () => {
   return (
     <div className="infoPageDiv">
       <div className="infoDetails">
+        <h1>Podcast Details</h1>
         <img
           className="infoImg"
           src={item.artworkUrl600}

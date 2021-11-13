@@ -47,7 +47,7 @@ export const Favorite = () => {
               alt={`songImg-${i}`}
             />
             <p className="songName" key={`trackN-${i}`}>
-              <b>{item.trackName}</b>
+              <b>{item.trackName.substr(0, 35)}</b>
             </p>
             <p className="artistName" key={`artN-${i}`}>
               {item.artistName}
@@ -72,7 +72,7 @@ export const Favorite = () => {
               alt={`songImg-${i}`}
             />
             <p className="songName" key={`trackN-${i}`}>
-              <b>{item.trackName}</b>
+              <b>{item.trackName.substr(0, 35)}</b>
             </p>
             <p className="artistName" key={`artN-${i}`}>
               {item.artistName}
@@ -97,7 +97,7 @@ export const Favorite = () => {
               alt={`songImg-${i}`}
             />
             <p className="songName" key={`trackN-${i}`}>
-              <b>{item.trackName}</b>
+              <b>{item.trackName.substr(0, 35)}</b>
             </p>
             <p className="artistName" key={`artN-${i}`}>
               {item.artistName}
@@ -122,7 +122,7 @@ export const Favorite = () => {
               alt={`songImg-${i}`}
             />
             <p className="songName" key={`trackN-${i}`}>
-              <b>{item.collectionName}</b>
+              <b>{item.collectionName.substr(0, 35)}</b>
             </p>
             <p className="artistName" key={`artN-${i}`}>
               {item.artistName}
@@ -147,7 +147,7 @@ export const Favorite = () => {
               alt={`songImg-${i}`}
             />
             <p className="songName" key={`trackN-${i}`}>
-              <b>{item.trackName}</b>
+              <b>{item.trackName.substr(0, 35)}</b>
             </p>
             <p className="artistName" key={`artN-${i}`}>
               {item.artistName}

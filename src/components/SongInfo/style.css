@@ -28,7 +28,7 @@
 }
 
 .album {
-  color: black;
+  color: rgb(92, 92, 92);
   font-size: 13px;
   margin-top: -1.5%;
   margin-left: 5px;
@@ -36,5 +36,4 @@
 
 .preview {
   width: 80%;
-  color: black;
 }

@@ -40,7 +40,7 @@ export const Rock = () => {
               alt={`songImg-${i}`}
             />
             <p className="songName" key={`trackN-${i}`}>
-              <b>{item.trackName}</b>
+              <b>{item.trackName.substr(0, 35)}</b>
             </p>
             <p className="artistName" key={`artN-${i}`}>
               {item.artistName}

@@ -19,7 +19,9 @@ export const SongInfo = () => {
         <h2 className="songName">
           <b>{item.trackName}</b>
         </h2>
-        <h4 className="album"> {item.collectionName}</h4>
+        <p className="album">
+          <b> {item.collectionName}</b>
+        </p>
         <h3 className="artistName">{item.artistName}</h3>
         <audio controls className="preview">
           <source src={item.previewUrl} type="audio/mp4" />
