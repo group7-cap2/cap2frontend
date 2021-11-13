@@ -14,7 +14,7 @@ export const Musicvid = () => {
   }, []);
 
   const getData = async () => {
-    const res = await axios.get("http://localhost:5000/musicvideo");
+    const res = await axios.get("https://cap2-backend.herokuapp.com/musicvideo");
 
     // console.log(data.data[0].data);
 
@@ -23,20 +23,20 @@ export const Musicvid = () => {
 
   const handleFav = async (item) => {
     const res = await axios.get(
-      `http://localhost:5000/musicvideo/isfav/${item.trackId}`
+      `https://cap2-backend.herokuapp.com/musicvideo/isfav/${item.trackId}`
     );
 
     if (res.data) {
-      axios.put(`http://localhost:5000/musicvideo/removeFav/${item.trackId}`);
+      axios.put(`https://cap2-backend.herokuapp.com/musicvideo/removeFav/${item.trackId}`);
     } else {
-      axios.post(`http://localhost:5000/musicvideo/addToFav/${item.trackId}`);
+      axios.post(`https://cap2-backend.herokuapp.com/musicvideo/addToFav/${item.trackId}`);
     }
 
     console.log(res.data);
   };
 
   const isFavFun = async (id) => {
-    const res = await axios.get(`http://localhost:5000/musicVideo/isfav/${id}`);
+    const res = await axios.get(`https://cap2-backend.herokuapp.com/musicVideo/isfav/${id}`);
 
     console.log(res.data);
     return res.data;

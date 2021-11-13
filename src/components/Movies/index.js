@@ -14,7 +14,7 @@ export const Movies = () => {
   }, []);
 
   const getData = async () => {
-    const res = await axios.get("http://localhost:5000/movie");
+    const res = await axios.get("https://cap2-backend.herokuapp.com/movie");
 
     // console.log(data.data[0].data);
 
@@ -23,20 +23,20 @@ export const Movies = () => {
 
   const handleFav = async (item) => {
     const res = await axios.get(
-      `http://localhost:5000/movie/isfav/${item.trackId}`
+      `https://cap2-backend.herokuapp.com/movie/isfav/${item.trackId}`
     );
 
     if (res.data) {
-      axios.put(`http://localhost:5000/movie/removeFav/${item.trackId}`);
+      axios.put(`https://cap2-backend.herokuapp.com/movie/removeFav/${item.trackId}`);
     } else {
-      axios.post(`http://localhost:5000/movie/addToFav/${item.trackId}`);
+      axios.post(`https://cap2-backend.herokuapp.com/movie/addToFav/${item.trackId}`);
     }
 
     console.log(res.data);
   };
 
   const isFavFun = async (id) => {
-    const res = await axios.get(`http://localhost:5000/movie/isfav/${id}`);
+    const res = await axios.get(`https://cap2-backend.herokuapp.com/movie/isfav/${id}`);
 
     console.log(res.data);
     return res.data;

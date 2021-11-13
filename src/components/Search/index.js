@@ -16,7 +16,7 @@ export const Search = () => {
 
   const getData = async () => {
     const res = await axios.get(
-      `http://localhost:5000/allmedia/search/${location.state}`
+      `https://cap2-backend.herokuapp.com/allmedia/search/${location.state}`
     );
 
     // console.log(data.data[0].data);
@@ -26,13 +26,13 @@ export const Search = () => {
 
   const handleFav = async (item) => {
     const res = await axios.get(
-      `http://localhost:5000/song/isfav/${item.trackId}`
+      `https://cap2-backend.herokuapp.com/song/isfav/${item.trackId}`
     );
 
     if (res.data) {
-      axios.put(`http://localhost:5000/${item.kind}/removeFav/${item.trackId}`);
+      axios.put(`https://cap2-backend.herokuapp.com/${item.kind}/removeFav/${item.trackId}`);
     } else {
-      axios.post(`http://localhost:5000/${item.kind}/addToFav/${item.trackId}`);
+      axios.post(`https://cap2-backend.herokuapp.com/${item.kind}/addToFav/${item.trackId}`);
     } /*هنا حطيت ايتم كايند بس يختلف المسمى
     الي كاتبينه عن الي بالقاعده الاساسيه  */
 
@@ -40,7 +40,7 @@ export const Search = () => {
   };
 
   const isFavFun = async (id) => {
-    const res = await axios.get(`http://localhost:5000/song/isfav/${id}`);
+    const res = await axios.get(`https://cap2-backend.herokuapp.com/song/isfav/${id}`);
 
     console.log(res.data);
     return res.data;

@@ -14,7 +14,7 @@ export const Podcasts = () => {
   }, []);
 
   const getData = async () => {
-    const res = await axios.get("http://localhost:5000/podcast");
+    const res = await axios.get("https://cap2-backend.herokuapp.com/podcast");
 
     // console.log(data.data[0].data);
 
@@ -23,20 +23,20 @@ export const Podcasts = () => {
 
   const handleFav = async (item) => {
     const res = await axios.get(
-      `http://localhost:5000/podcast/isfav/${item.trackId}`
+      `https://cap2-backend.herokuapp.com/podcast/isfav/${item.trackId}`
     );
 
     if (res.data) {
-      axios.put(`http://localhost:5000/podcast/removeFav/${item.trackId}`);
+      axios.put(`https://cap2-backend.herokuapp.com/podcast/removeFav/${item.trackId}`);
     } else {
-      axios.post(`http://localhost:5000/podcast/addToFav/${item.trackId}`);
+      axios.post(`https://cap2-backend.herokuapp.com/podcast/addToFav/${item.trackId}`);
     }
 
     console.log(res.data);
   };
 
   const isFavFun = async (id) => {
-    const res = await axios.get(`http://localhost:5000/podcast/isfav/${id}`);
+    const res = await axios.get(`https://cap2-backend.herokuapp.com/podcast/isfav/${id}`);
 
     console.log(res.data);
     return res.data;

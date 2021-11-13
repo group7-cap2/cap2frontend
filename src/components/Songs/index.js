@@ -15,7 +15,7 @@ export const Songs = () => {
   }, []);
 
   const getData = async () => {
-    const res = await axios.get("http://localhost:5000/song");
+    const res = await axios.get("https://cap2-backend.herokuapp.com/song");
 
     // console.log(data.data[0].data);
 
@@ -24,20 +24,20 @@ export const Songs = () => {
 
   const handleFav = async (item) => {
     const res = await axios.get(
-      `http://localhost:5000/song/isfav/${item.trackId}`
+      `https://cap2-backend.herokuapp.com/song/isfav/${item.trackId}`
     );
 
     if (res.data) {
-      axios.put(`http://localhost:5000/song/removeFav/${item.trackId}`);
+      axios.put(`https://cap2-backend.herokuapp.com/song/removeFav/${item.trackId}`);
     } else {
-      axios.post(`http://localhost:5000/song/addToFav/${item.trackId}`);
+      axios.post(`https://cap2-backend.herokuapp.com/song/addToFav/${item.trackId}`);
     }
 
     console.log(res.data);
   };
 
   const isFavFun = async (id) => {
-    const res = await axios.get(`http://localhost:5000/song/isfav/${id}`);
+    const res = await axios.get(`https://cap2-backend.herokuapp.com/song/isfav/${id}`);
 
     console.log(res.data);
     return res.data;
