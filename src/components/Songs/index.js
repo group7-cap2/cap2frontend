@@ -2,11 +2,11 @@ import React from "react";
 import "./style.css";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import axios, { Axios } from "axios";
+import axios from "axios";
 
 export const Songs = () => {
   const [song, setSong] = useState([]);
-  const [isFav, setIsFav] = useState([]);
+  // const [isFav, setIsFav] = useState([]);
 
   const navigate = useNavigate();
 

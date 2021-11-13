@@ -6,7 +6,7 @@ export const Header = () => {
   const navigate = useNavigate();
 
   const handelSearch = (event) => {
-    if (event.key == "Enter") {
+    if (event.key === "Enter") {
       navigate("/search", { state: event.target.value });
     }
   };

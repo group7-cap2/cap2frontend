@@ -14,7 +14,7 @@ export const PodcastInfo = () => {
         <img
           className="infoImg"
           src={item.artworkUrl600}
-          alt={"songImg-${i}"}
+          alt={"songImg-102"}
         />
         <p className="songName">
           <b>{item.trackName}</b>

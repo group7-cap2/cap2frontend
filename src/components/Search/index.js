@@ -11,18 +11,29 @@ export const Search = () => {
   const location = useLocation();
 
   useEffect(() => {
+    const getData = async () => {
+      const res = await axios.get(
+        `https://cap2-backend.herokuapp.com/allmedia/search/${location.state}`
+      );
+  
+      // console.log(data.data[0].data);
+  
+      setResults(res.data);
+    };
+    
     getData();
-  }, []);
 
-  const getData = async () => {
-    const res = await axios.get(
-      `https://cap2-backend.herokuapp.com/allmedia/search/${location.state}`
-    );
+  },[]);
 
-    // console.log(data.data[0].data);
+  // const getData = async () => {
+  //   const res = await axios.get(
+  //     `https://cap2-backend.herokuapp.com/allmedia/search/${location.state}`
+  //   );
 
-    setResults(res.data);
-  };
+  //   // console.log(data.data[0].data);
+
+  //   setResults(res.data);
+  // };
 
   const handleFav = async (item) => {
     const res = await axios.get(

@@ -35,12 +35,12 @@ export const Kpop = () => {
     console.log(res.data);
   };
 
-  const isFavFun = async (id) => {
-    const res = await axios.get(`https://cap2-backend.herokuapp.com/song/isfav/${id}`);
+  // const isFavFun = async (id) => {
+  //   const res = await axios.get(`https://cap2-backend.herokuapp.com/song/isfav/${id}`);
 
-    console.log(res.data);
-    return res.data;
-  };
+  //   console.log(res.data);
+  //   return res.data;
+  // };
 
   return (
     <div className="mediaWrapper">

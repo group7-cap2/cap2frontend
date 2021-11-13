@@ -17,7 +17,7 @@ export const Favorite = () => {
 
   useEffect(() => {
     getData();
-    console.log(favList);
+    // console.log(favList);
   }, []);
 
   const getData = async () => {

@@ -5,7 +5,7 @@ import "./style.css";
 
 export const Home = () => {
   const [song, setSong] = useState([]);
-  const [isFav, setIsFav] = useState([]);
+  // const [isFav, setIsFav] = useState([]);
 
   const navigate = useNavigate();
 
