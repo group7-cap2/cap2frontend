@@ -23,7 +23,7 @@ export const Kpop = () => {
 
   return (
     <div className="mediaWrapper">
-      <h1>Songs</h1>
+      <h1>K-pop Songs</h1>
       <div className="mediaDiv">
         {song.map((item, i) => (
           <div
