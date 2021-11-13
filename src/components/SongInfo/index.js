@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import {  useLocation } from "react-router-dom";
 import "./style.css";
 
 export const SongInfo = () => {
@@ -14,7 +14,7 @@ export const SongInfo = () => {
         <img
           className="infoImg"
           src={item.artworkUrl100}
-          alt={"songImg-${i}"}
+          alt={`songImg-100`}
         />
         <h2 className="songName">
           <b>{item.trackName}</b>

@@ -14,7 +14,7 @@ export const AudioBookInfo = () => {
         <img
           className="infoImg"
           src={item.artworkUrl100}
-          alt={"songImg-${i}"}
+          alt={`songImg-101`}
         />
         <h2 className="songName">
           <b>{item.trackName}</b>

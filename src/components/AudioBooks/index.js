@@ -14,7 +14,7 @@ export const AudioBook = () => {
   }, []);
 
   const getData = async () => {
-    const res = await axios.get("http://localhost:5000/audiobook");
+    const res = await axios.get("https://cap2-backend.herokuapp.com/audiobook");
 
     // console.log(data.data[0].data);
 
@@ -23,16 +23,14 @@ export const AudioBook = () => {
 
   const handleFav = async (item) => {
     const res = await axios.get(
-      `http://localhost:5000/audiobook/isfav/${item.collectionId}`
+      `https://cap2-backend.herokuapp.com/audiobook/isfav/${item.trackId}`
     );
 
     if (res.data) {
-      axios.put(
-        `http://localhost:5000/audiobook/removeFav/${item.collectionId}`
-      );
+      axios.put(`https://cap2-backend.herokuapp.com/removeFav/${item.trackId}`);
     } else {
       axios.post(
-        `http://localhost:5000/audiobook/addToFav/${item.collectionId}`
+        `https://cap2-backend.herokuapp.com/audiobook/addToFav/${item.trackId}`
       );
     }
 
@@ -40,7 +38,9 @@ export const AudioBook = () => {
   };
 
   const isFavFun = async (id) => {
-    const res = await axios.get(`http://localhost:5000/audiobook/isfav/${id}`);
+    const res = await axios.get(
+      `https://cap2-backend.herokuapp.com/audiobook/isfav/${id}`
+    );
 
     console.log(res.data);
     return res.data;
