@@ -36,7 +36,7 @@ export const AudioBook = () => {
               alt={`songImg-${i}`}
             />
             <p className="songName" key={`trackN-${i}`}>
-              <b>{item.trackName}</b>
+              <b>{item.collectionName}</b>
             </p>
             <p className="artistName" key={`artN-${i}`}>
               {item.artistName}

@@ -1,4 +1,4 @@
-.favWrapper {
+.mediaWrapper {
   width: 75%;
   margin-left: 285px;
   background-color: white;
@@ -6,3 +6,41 @@
   padding-left: 10px;
 }
 
+.mediaDiv {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mediaCards {
+  width: 18%;
+  position: fixed;
+  margin: 5px;
+  position: relative;
+  text-align: left;
+  color: white;
+  transition: all 0.3s ease 0s;
+}
+
+.mediaCards:hover {
+  width: 18.5%;
+  cursor: pointer;
+}
+
+.artworkImg {
+  width: 95%;
+  margin: 4px;
+}
+
+.trackName {
+  color: black;
+  margin-left: 5px;
+}
+
+.artistName {
+  color: black;
+  font-size: 15px;
+  margin-top: -7px;
+  margin-left: 5px;
+}
