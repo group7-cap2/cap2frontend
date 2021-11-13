@@ -62,7 +62,7 @@ export const Songs = () => {
                 alt={`songImg-${i}`}
               />
               <p className="songName" key={`trackN-${i}`}>
-                <b>{item.trackName}</b>
+                <b>{item.trackName.substr(0, 10)+ "  ..." }</b>
               </p>
               <p className="artistName" key={`artN-${i}`}>
                 {item.artistName}

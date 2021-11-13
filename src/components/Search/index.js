@@ -31,7 +31,7 @@ export const Search = () => {
             className="homeSongs"
             key={i}
             onClick={() => {
-              navigate("/podcast/info", { state: item });
+              navigate(`/${item.kind}/info`, { state: item });
             }}
           >
             <img
