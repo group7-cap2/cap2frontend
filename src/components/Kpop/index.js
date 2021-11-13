@@ -27,20 +27,26 @@ export const Kpop = () => {
     );
 
     if (res.data) {
-      axios.put(`https://cap2-backend.herokuapp.com/song/removeFav/${item.trackId}`);
+      axios.put(
+        `https://cap2-backend.herokuapp.com/song/removeFav/${item.trackId}`
+      );
     } else {
-      axios.post(`https://cap2-backend.herokuapp.com/song/addToFav/${item.trackId}`);
+      axios.post(
+        `https://cap2-backend.herokuapp.com/song/addToFav/${item.trackId}`
+      );
     }
 
     console.log(res.data);
   };
 
-  // const isFavFun = async (id) => {
-  //   const res = await axios.get(`https://cap2-backend.herokuapp.com/song/isfav/${id}`);
+  const isFavFun = async (id) => {
+    const res = await axios.get(
+      `https://cap2-backend.herokuapp.com/song/isfav/${id}`
+    );
 
-  //   console.log(res.data);
-  //   return res.data;
-  // };
+    console.log(res.data);
+    return res.data;
+  };
 
   return (
     <div className="mediaWrapper">
