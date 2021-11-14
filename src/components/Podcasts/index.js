@@ -6,40 +6,60 @@ import { useNavigate } from "react-router";
 
 export const Podcasts = () => {
   const [podC, setPodC] = useState([]);
+  const [favIcon, setFavIcon] = useState(Array(100).fill("❤"));
 
   const navigate = useNavigate();
 
   useEffect(() => {
     getData();
+    setFavIconFun();
   }, []);
+
+  useEffect(() => {
+    getData();
+  }, [favIcon]);
 
   const getData = async () => {
     const res = await axios.get("https://cap2-backend.herokuapp.com/podcast");
 
-    // console.log(data.data[0].data);
-
     setPodC(res.data);
   };
 
-  const handleFav = async (item) => {
+  const handleFav = async (item, i) => {
     const res = await axios.get(
       `https://cap2-backend.herokuapp.com/song/isfav/${item.trackId}`
     );
 
     if (res.data) {
-      axios.put(`https://cap2-backend.herokuapp.com/song/removeFav/${item.trackId}`);
+      axios.put(
+        `https://cap2-backend.herokuapp.com/song/removeFav/${item.trackId}`
+      );
+      let newArr = [...favIcon];
+      newArr[i] = "❤";
+      setFavIcon([...newArr]);
     } else {
-      axios.post(`https://cap2-backend.herokuapp.com/song/addToFav/${item.trackId}`);
+      axios.post(
+        `https://cap2-backend.herokuapp.com/song/addToFav/${item.trackId}`
+      );
+      let newArr = [...favIcon];
+      newArr[i] = "✘";
+      setFavIcon([...newArr]);
     }
-
-    console.log(res.data);
   };
 
-  const isFavFun = async (id) => {
-    const res = await axios.get(`https://cap2-backend.herokuapp.com/song/isfav/${id}`);
+  const setFavIconFun = async () => {
+    let newArr = [...favIcon];
 
-    console.log(res.data);
-    return res.data;
+    const res = await axios.get("https://cap2-backend.herokuapp.com/podcast");
+    res.data.map(async (item, i) => {
+      const res = await axios.get(
+        `https://cap2-backend.herokuapp.com/song/isfav/${item.trackId}`
+      );
+      if (res.data === true) newArr[i] = "✘";
+      if (newArr.length === 100) {
+        setFavIcon(newArr);
+      }
+    });
   };
 
   return (
@@ -69,9 +89,9 @@ export const Podcasts = () => {
             <button
               className="favBtn"
               alt="favIcon"
-              onClick={() => handleFav(item)}
+              onClick={() => handleFav(item, i)}
             >
-              {isFavFun(item.trackId) ? `❤` : `✘`}
+              {favIcon[i]}
             </button>
           </div>
         ))}
