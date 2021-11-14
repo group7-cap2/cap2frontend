@@ -10,10 +10,10 @@
   display: block;
 }
 
-
 .infoImg {
   width: 40%;
   margin: 1%;
+  border-radius: 10px;
 }
 
 .songName {
