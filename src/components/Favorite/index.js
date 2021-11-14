@@ -59,7 +59,7 @@ export const Favorite = () => {
 
   return (
     <div className="mediaWrapperFav">
-      <h1>Songs</h1>
+      <h1>Favorite</h1>
       <div className="favDiv">
         {favList.song.map((item, i) => (
           <div className="favSongs" key={i}>
@@ -91,134 +91,7 @@ export const Favorite = () => {
           </div>
         ))}
       </div>
-      <h1>Podcasts</h1> {/* هنا ننادي الكيز للتايب الي اختارها المستخدم*/}
-      <div className="favDiv">
-        {favList.podcast.map((item, i) => (
-          <div className="favSongs" key={i}>
-            <div
-              onClick={() => {
-                navigate("/podcast/info", { state: item });
-              }}
-            >
-              <img
-                key={`img-${i}`}
-                className="songImg"
-                src={item.artworkUrl600}
-                alt={`songImg-${i}`}
-              />
-              <p className="songName" key={`trackN-${i}`}>
-                <b>{item.trackName.substr(0, 35)}</b>
-              </p>
-              <p className="artistName" key={`artN-${i}`}>
-                {item.artistName}
-              </p>
-            </div>
-            <button
-              className="favBtn"
-              alt="favIcon"
-              onClick={() => handleFav(item)}
-            >
-              {isFavFun(item.trackId) ? `❤` : `✘`}
-            </button>
-          </div>
-        ))}
-      </div>
-      <h1>Music Videos</h1> {/* هنا ننادي الكيز للتايب الي اختارها المستخدم*/}
-      <div className="favDiv">
-        {favList.musicVideo.map((item, i) => (
-          <div className="favSongs" key={i}>
-            <div
-              onClick={() => {
-                navigate("/musicvideo/info", { state: item });
-              }}
-            >
-              <img
-                key={`img-${i}`}
-                className="songImg"
-                src={item.artworkUrl100}
-                alt={`songImg-${i}`}
-              />
-              <p className="songName" key={`trackN-${i}`}>
-                <b>{item.trackName.substr(0, 35)}</b>
-              </p>
-              <p className="artistName" key={`artN-${i}`}>
-                {item.artistName}
-              </p>
-            </div>{" "}
-            <button
-              className="favBtn"
-              alt="favIcon"
-              onClick={() => handleFav(item)}
-            >
-              {isFavFun(item.trackId) ? `❤` : `✘`}
-            </button>
-          </div>
-        ))}
-      </div>
-      <h1>Audio Books</h1> {/* هنا ننادي الكيز للتايب الي اختارها المستخدم*/}
-      <div className="favDiv">
-        {favList.audiobook.map((item, i) => (
-          <div className="favSongs" key={i}>
-            <div
-              onClick={() => {
-                navigate("/audiobook/info", { state: item });
-              }}
-            >
-              <img
-                key={`img-${i}`}
-                className="songImg"
-                src={item.artworkUrl100}
-                alt={`songImg-${i}`}
-              />
-              <p className="songName" key={`trackN-${i}`}>
-                <b>{item.collectionName.substr(0, 35)}</b>
-              </p>
-              <p className="artistName" key={`artN-${i}`}>
-                {item.artistName}
-              </p>
-            </div>{" "}
-            <button
-              className="favBtn"
-              alt="favIcon"
-              onClick={() => handleFav(item)}
-            >
-              {isFavFun(item.trackId) ? `❤` : `✘`}
-            </button>
-          </div>
-        ))}
-      </div>
-      <h1>Movies</h1> {/* هنا ننادي الكيز للتايب الي اختارها المستخدم*/}
-      <div className="favDiv">
-        {favList.movie.map((item, i) => (
-          <div className="favSongs" key={i}>
-            <div
-              onClick={() => {
-                navigate("/movie/info", { state: item });
-              }}
-            >
-              <img
-                key={`img-${i}`}
-                className="songImg"
-                src={item.artworkUrl100}
-                alt={`songImg-${i}`}
-              />
-              <p className="songName" key={`trackN-${i}`}>
-                <b>{item.trackName.substr(0, 35)}</b>
-              </p>
-              <p className="artistName" key={`artN-${i}`}>
-                {item.artistName}
-              </p>
-            </div>
-            <button
-              className="favBtn"
-              alt="favIcon"
-              onClick={() => handleFav(item)}
-            >
-              {isFavFun(item.trackId) ? `❤` : `✘`}
-            </button>
-          </div>
-        ))}
-      </div>
+      
     </div>
   );
 };
