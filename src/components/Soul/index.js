@@ -27,16 +27,22 @@ export const Soul = () => {
     );
 
     if (res.data) {
-      axios.put(`https://cap2-backend.herokuapp.com/song/removeFav/${item.trackId}`);
+      axios.put(
+        `https://cap2-backend.herokuapp.com/song/removeFav/${item.trackId}`
+      );
     } else {
-      axios.post(`https://cap2-backend.herokuapp.com/song/addToFav/${item.trackId}`);
+      axios.post(
+        `https://cap2-backend.herokuapp.com/song/addToFav/${item.trackId}`
+      );
     }
 
     console.log(res.data);
   };
 
   const isFavFun = async (id) => {
-    const res = await axios.get(`https://cap2-backend.herokuapp.com/song/isfav/${id}`);
+    const res = await axios.get(
+      `https://cap2-backend.herokuapp.com/song/isfav/${id}`
+    );
 
     console.log(res.data);
     return res.data;
@@ -56,7 +62,7 @@ export const Soul = () => {
               <img
                 key={`img-${i}`}
                 className="songImg"
-                src={item.artworkUrl100}
+                src={item.artworkUrl100.replace(`100x100`, `1400x1400`)}
                 alt={`songImg-${i}`}
               />
               <p className="songName" key={`trackN-${i}`}>

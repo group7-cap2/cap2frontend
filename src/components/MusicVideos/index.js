@@ -56,7 +56,7 @@ export const Musicvid = () => {
               <img
                 key={`img-${i}`}
                 className="songImg"
-                src={item.artworkUrl100}
+                src={item.artworkUrl100.replace(`100x100`, `1400x1400`)}
                 alt={`songImg-${i}`}
               />
               <p className="songName" key={`trackN-${i}`}>

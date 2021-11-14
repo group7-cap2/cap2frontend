@@ -13,7 +13,7 @@ export const SongInfo = () => {
         <h1>Song Details</h1>
         <img
           className="infoImg"
-          src={item.artworkUrl100}
+          src={item.artworkUrl100.replace(`100x100`, `1400x1400`)}
           alt={`songImg-100`}
         />
         <h2 className="songName">
